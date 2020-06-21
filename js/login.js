@@ -51,15 +51,15 @@ $(function () {
         var username = $('#registerform  [name = username]').val()
         var password = $('#registerform  [name = password]').val()
         console.log(username);
-        
+
         $.ajax({
-            type:'POST',
-            url:'http://ajax.frontend.itheima.net/api/login',
-            data:{
+            type: 'POST',
+            url: 'http://ajax.frontend.itheima.net/api/login',
+            data: {
                 username: username,
                 password: password
             },
-            success:function (res) {
+            success: function (res) {
                 console.log(res);
 
                 layer.msg('登录成功')
