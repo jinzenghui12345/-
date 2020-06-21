@@ -51,11 +51,11 @@
                     class="layui-input">
                 <!-- 密码 -->
                 <i class="layui-icon layui-icon-password" style="font-size: 16px; color: #1E9FFF;"></i>
-                <input type="text" name="password" required lay-verify="required" placeholder="请输入账户" autocomplete="off"
+                <input type="text" name="password" required lay-verify="required|pwd" placeholder="请输入账户" autocomplete="off"
                     class="layui-input">
                 <!-- 确认密码 -->
                 <i class="layui-icon layui-icon-password" style="font-size: 16px; color: #1E9FFF;"></i>
-                <input type="text" name="repassword" required lay-verify="required" placeholder="请确认密码"
+                <input type="text" name="repassword" required lay-verify="required|pwd|repwd" placeholder="请确认密码"
                     autocomplete="off" class="layui-input">
                 <!-- 提交按钮 -->
                 <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="formDemo">立即提交</button>
@@ -68,6 +68,7 @@
 </body>
 <script src="./assets/lib/jquery.js"></script>
 <script src="./assets/lib/layui/layui.all.js"></script>
+<script src="./js/baseapi.js"></script>
 <script src="./js/login.js"></script>
 
 </html>

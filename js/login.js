@@ -16,10 +16,11 @@ $(function () {
             /^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'
         ],
         repwd: function (value) {
-            var val = $('.layui-icon [name = password]')
-            if (val !== value) {
-                return '两次密码不一致'
-            }
+            var val = $('.layui-icon [name = password]').val()
+            
+            // if (val !== value) {
+            //     return '两次密码不一致'
+            // }
         }
     })
     // 注册
@@ -29,7 +30,7 @@ $(function () {
         var password = $('#loginform [name = password]').val()
 
         $.post(
-            'http://ajax.frontend.itheima.net/api/reguser',
+            '/api/reguser',
             {
                 username: username,
                 password: password
@@ -37,7 +38,7 @@ $(function () {
             function (res) {
                 console.log(res);
                 if (res.status !== 0) {
-                    return layer.msg('注册成功')
+                    return layer.msg(res.status)
                 }
                 layer.msg('注册成功')
             }
@@ -50,18 +51,21 @@ $(function () {
         e.preventDefault()
         var username = $('#registerform  [name = username]').val()
         var password = $('#registerform  [name = password]').val()
-        console.log(username);
+        
 
         $.ajax({
             type: 'POST',
-            url: 'http://ajax.frontend.itheima.net/api/login',
+            url: '/api/login',
             data: {
                 username: username,
                 password: password
             },
             success: function (res) {
+                if(res.status!==0){
+                    return '登陆失败'
+                }
                 console.log(res);
-
+                localStorage.setItem('token',res.token) 
                 layer.msg('登录成功')
                 console.log(res.token);
                 location.href = './index.html'

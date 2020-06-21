@@ -53,3 +53,9 @@ body {
 #loginbox .layui-input{
     padding-left: 30px;
 }
+ 
+.layui-nav-child .layui-icon {
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
