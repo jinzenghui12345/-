@@ -24,47 +24,50 @@
         </div>
 
         <div class="registerbox" id="registerbox">
-            <!-- 注册表单 -->
-           
-            <form class="layui-form" action="" id="registerform"></form>
-            <!-- 用户名 -->
-            <i class="layui-icon layui-icon-username" style="font-size: 16px; color: #1E9FFF;"></i>  
-            <input type="text" name="title" required lay-verify="required" placeholder="请输入账户" autocomplete="off"
-                class="layui-input">
-            <!-- 密码 -->
-            <i class="layui-icon layui-icon-password" style="font-size: 16px; color: #1E9FFF;"></i>  
-            <input type="text" name="title" required lay-verify="required" placeholder="请输入密码" autocomplete="off"
-                class="layui-input">
-            <!-- 提交按钮 -->
-            <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="formDemo">立即提交</button>
-            <a href="javascript:;" id="register">去注册</a>
-            </from>
+            <!-- 登录表单 -->
+
+            <form class="layui-form" action="" id="registerform">
+                <!-- 用户名 -->
+                <i class="layui-icon layui-icon-username" style="font-size: 16px; color: #1E9FFF;"></i>
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入账户" autocomplete="off"
+                    class="layui-input">
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password" style="font-size: 16px; color: #1E9FFF;"></i>
+                    <input type="text" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 提交按钮 -->
+                <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="formDemo">立即提交</button>
+                <a href="javascript:;" id="register">去注册</a>
+            </form>
         </div>
-        <!--登录表单 -->
+        <!--注册表单 -->
         <div class="loginbox" id="loginbox">
-            <form class="layui-form" action="" id="loginform"></form>
-            <!-- 用户名 -->
-            <i class="layui-icon layui-icon-username" style="font-size: 16px; color: #1E9FFF;"></i>  
-            <input type="text" name="title" required lay-verify="required" placeholder="请输入账户" autocomplete="off"
-                class="layui-input">
-            <!-- 密码 -->
-            <i class="layui-icon layui-icon-password" style="font-size: 16px; color: #1E9FFF;"></i>  
-            <input type="text" name="title" required lay-verify="required" placeholder="请输入账户" autocomplete="off"
-                class="layui-input">
+            <form class="layui-form" action="" id="loginform">
+                <!-- 用户名 -->
+                <i class="layui-icon layui-icon-username" style="font-size: 16px; color: #1E9FFF;"></i>
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入账户" autocomplete="off"
+                    class="layui-input">
+                <!-- 密码 -->
+                <i class="layui-icon layui-icon-password" style="font-size: 16px; color: #1E9FFF;"></i>
+                <input type="text" name="password" required lay-verify="required" placeholder="请输入账户" autocomplete="off"
+                    class="layui-input">
                 <!-- 确认密码 -->
-            <i class="layui-icon layui-icon-password" style="font-size: 16px; color: #1E9FFF;"></i>  
-            <input type="text" name="title" required lay-verify="required" placeholder="请确认密码" autocomplete="off"
-                class="layui-input">
-            <!-- 提交按钮 -->
-            <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="formDemo">立即提交</button>
-            <a href="javascript:;" id="login" class="">登录</a>
-            </from>
+                <i class="layui-icon layui-icon-password" style="font-size: 16px; color: #1E9FFF;"></i>
+                <input type="text" name="repassword" required lay-verify="required" placeholder="请确认密码"
+                    autocomplete="off" class="layui-input">
+                <!-- 提交按钮 -->
+                <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="formDemo">立即提交</button>
+                <a href="javascript:;" id="login" class="">登录</a>
+            </form>
         </div>
 
     </div>
     </div>
 </body>
 <script src="./assets/lib/jquery.js"></script>
+<script src="./assets/lib/layui/layui.all.js"></script>
 <script src="./js/login.js"></script>
 
 </html>
